@@ -249,6 +249,10 @@
     {
       "date": "2026-05-30",
       "change": "Data gap fixed: 393 missing SW location+service pages added to pages.json (44 SW locations x 9 services). All SW locations now have full coverage across house-clearance, garage-clearance, rubbish-removal, loft-clearance, office-clearance, shed-clearance, garden-rubbish-clearance, hotel-clearance, loft-insulation-removal. Generator rerun: 47,581 populated, 153 skipped. Build: 47,761 pages. All protected core pages backed up and restored. house-clearance-truro and all SW location pages confirmed working in local browser."
+    },
+    {
+      "date": "2026-05-30",
+      "change": "Added card payment notice to CTA banner on all location pages. Styled as dark green badge (#006400) matching WhatsApp button. Text: We now accept card payments \u2014 easier and more convenient for our customers. Applied to both SW and UK templates in generate_pages.py. Rebuilt 47,761 pages."
     }
   ],
   "known_issues": {

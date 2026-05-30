@@ -84,6 +84,7 @@ def build_sw_body(service, location, loc_slug, video_id, sibling_links):
     <a href="tel:07759375790" class="btn btn-call">Call Now – 07759 375790</a>
     <a href="/contact/" class="btn btn-cta">Book Online</a>
   </div>
+  <div style="display:inline-block;margin-top:15px;background:#006400;color:#ffffff;font-weight:bold;font-size:0.95em;padding:10px 22px;border-radius:8px;">💳 We now accept card payments — easier and more convenient for our customers.</div>
 </div>
 
 <div class="trust-banner">
@@ -250,6 +251,7 @@ def build_uk_body(service, location, video_id, sibling_links):
     <a href="tel:07759375790" class="btn btn-call">Call Now – 07759 375790</a>
     <a href="/contact/" class="btn btn-cta">Book Online</a>
   </div>
+  <div style="display:inline-block;margin-top:15px;background:#006400;color:#ffffff;font-weight:bold;font-size:0.95em;padding:10px 22px;border-radius:8px;">💳 We now accept card payments — easier and more convenient for our customers.</div>
 </div>
 
 <div class="trust-banner">
