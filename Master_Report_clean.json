@@ -29,7 +29,7 @@
     "cookie_banner": {
       "status": "inlined",
       "location": "theme/base.html",
-      "notes": "Cookie banner inlined directly into base.html \u2014 engine has no include system. Do not use {% include %} tags."
+      "notes": "Cookie banner inlined directly into base.html — engine has no include system. Do not use {% include %} tags."
     }
   },
   "data_schema": {
@@ -72,23 +72,23 @@
     },
     {
       "date": "2026-05-25",
-      "change": "Engine fix: if __name__ == __main__ guard added to build_sites.py \u2014 import no longer triggers full loop across all sites."
+      "change": "Engine fix: if __name__ == __main__ guard added to build_sites.py — import no longer triggers full loop across all sites."
     },
     {
       "date": "2026-05-25",
-      "change": "base.html must use {{ content }} only \u2014 engine does plain string replace, no Jinja2, no {% %} tags supported."
+      "change": "base.html must use {{ content }} only — engine does plain string replace, no Jinja2, no {% %} tags supported."
     },
     {
       "date": "2026-05-25",
-      "change": "Global components (header, cookie banner) must be inlined directly into theme/base.html \u2014 engine has no include system."
+      "change": "Global components (header, cookie banner) must be inlined directly into theme/base.html — engine has no include system."
     },
     {
       "date": "2026-05-25",
-      "change": "assets/ directory must be copied into build/ or served from project root \u2014 build/ directory only contains generated HTML."
+      "change": "assets/ directory must be copied into build/ or served from project root — build/ directory only contains generated HTML."
     },
     {
       "date": "2026-05-25",
-      "change": "Never append serve command to build command \u2014 if server already running on port 8000 it will throw OSError. Build only, then refresh browser."
+      "change": "Never append serve command to build command — if server already running on port 8000 it will throw OSError. Build only, then refresh browser."
     },
     {
       "date": "2026-05-25",
@@ -96,7 +96,7 @@
     },
     {
       "date": "2026-05-25",
-      "change": "Migration confirmed complete. Jekyll _data files not required \u2014 all content rendered into pages.json. Images migrated."
+      "change": "Migration confirmed complete. Jekyll _data files not required — all content rendered into pages.json. Images migrated."
     },
     {
       "date": "2026-05-25",
@@ -108,7 +108,7 @@
     },
     {
       "date": "2026-05-25",
-      "change": "Added known_issue: body_content must never contain full standalone HTML \u2014 double header/footer risk on all sites migrated from Jekyll."
+      "change": "Added known_issue: body_content must never contain full standalone HTML — double header/footer risk on all sites migrated from Jekyll."
     },
     {
       "date": "2026-05-25",
@@ -172,7 +172,7 @@
     },
     {
       "date": "2026-05-29",
-      "change": "FIX REQUIREMENTS DOCUMENTED: 1) Add asset overrides protection \u2014 copy custom static assets from theme/overrides/ after build. 2) Enforce payload validation \u2014 prevent generation of empty layout shells when body_content length is 0. 3) Variable sanitization \u2014 add string replacement rules in build.py to resolve {{ site.hero_image }} to valid asset paths."
+      "change": "FIX REQUIREMENTS DOCUMENTED: 1) Add asset overrides protection — copy custom static assets from theme/overrides/ after build. 2) Enforce payload validation — prevent generation of empty layout shells when body_content length is 0. 3) Variable sanitization — add string replacement rules in build.py to resolve {{ site.hero_image }} to valid asset paths."
     },
     {
       "date": "2026-05-29",
@@ -208,15 +208,15 @@
     },
     {
       "date": "2026-05-30",
-      "change": "Stylesheet and base.html audited. ds-styles.css confirmed complete with all required classes. base.html has 9 critical empty fields: title, meta description, stylesheet href, canonical href, WhatsApp href, call href, header CTA text, footer phone, cookie banner policy link. Engine only supports {{ content }} token \u2014 no variable substitution. All findings recorded in stylesheet_audit and base_html_audit blocks."
+      "change": "Stylesheet and base.html audited. ds-styles.css confirmed complete with all required classes. base.html has 9 critical empty fields: title, meta description, stylesheet href, canonical href, WhatsApp href, call href, header CTA text, footer phone, cookie banner policy link. Engine only supports {{ content }} token — no variable substitution. All findings recorded in stylesheet_audit and base_html_audit blocks."
     },
     {
       "date": "2026-05-30",
-      "change": "Live server directory audit completed. 51,675 total directories confirmed. 31 service prefixes live on server recorded. Notable files in httpdocs root recorded including Master_Report.json being publicly accessible. Gap of ~4,315 directories between server and current pages.json noted \u2014 legacy Jekyll pages still live. All findings appended to live_server_directory_audit block."
+      "change": "Live server directory audit completed. 51,675 total directories confirmed. 31 service prefixes live on server recorded. Notable files in httpdocs root recorded including Master_Report.json being publicly accessible. Gap of ~4,315 directories between server and current pages.json noted — legacy Jekyll pages still live. All findings appended to live_server_directory_audit block."
     },
     {
       "date": "2026-05-30",
-      "change": "Sitemap audit completed. Confirmed 5 Jekyll sitemaps live on server: sitemap-cornwall.xml, sitemap-devon.xml, sitemap-uk-ah.xml, sitemap-uk-im.xml, sitemap-uk2.xml. Confirmed sitemap.xml (localhost:4000 URLs) is NOT present \u2014 previously recorded critical issue is resolved. Noted that no omni-builder sitemap exists yet."
+      "change": "Sitemap audit completed. Confirmed 5 Jekyll sitemaps live on server: sitemap-cornwall.xml, sitemap-devon.xml, sitemap-uk-ah.xml, sitemap-uk-im.xml, sitemap-uk2.xml. Confirmed sitemap.xml (localhost:4000 URLs) is NOT present — previously recorded critical issue is resolved. Noted that no omni-builder sitemap exists yet."
     },
     {
       "date": "2026-05-30",
@@ -224,7 +224,7 @@
     },
     {
       "date": "2026-05-30",
-      "change": "Service area breakdown confirmed from direct inspection of pages.json. 8 UK-wide services confirmed (Garage Clearance, Hotel Clearance, House Clearance, Loft Clearance, Loft Insulation Removal, Office Clearance, Rubbish Removal, Shed Clearance). 2 South West only services confirmed (Garden Rubbish Clearance, Hot Tub Removal \u2014 152 Cornwall/Devon pages each). Bad data recorded: Hot Tub Removal has 'Cornwall and Devon' as a location entry. 6 UNKNOWN pages with missing service_name recorded. Generator rule recorded. All findings appended to service_area_breakdown block."
+      "change": "Service area breakdown confirmed from direct inspection of pages.json. 8 UK-wide services confirmed (Garage Clearance, Hotel Clearance, House Clearance, Loft Clearance, Loft Insulation Removal, Office Clearance, Rubbish Removal, Shed Clearance). 2 South West only services confirmed (Garden Rubbish Clearance, Hot Tub Removal — 152 Cornwall/Devon pages each). Bad data recorded: Hot Tub Removal has 'Cornwall and Devon' as a location entry. 6 UNKNOWN pages with missing service_name recorded. Generator rule recorded. All findings appended to service_area_breakdown block."
     },
     {
       "date": "2026-05-30",
@@ -232,11 +232,11 @@
     },
     {
       "date": "2026-05-30",
-      "change": "base.html rebuilt \u2014 all 9 critical empty fields hardcoded: title, meta description, stylesheet href, canonical href, WhatsApp href, call href, header CTA text, footer phone, cookie policy link. Verified via grep before any build."
+      "change": "base.html rebuilt — all 9 critical empty fields hardcoded: title, meta description, stylesheet href, canonical href, WhatsApp href, call href, header CTA text, footer phone, cookie policy link. Verified via grep before any build."
     },
     {
       "date": "2026-05-30",
-      "change": "generate_pages.py deleted \u2014 broken curl-based generator. examples/ deleted \u2014 wrong flat file structure. Both confirmed deleted."
+      "change": "generate_pages.py deleted — broken curl-based generator. examples/ deleted — wrong flat file structure. Both confirmed deleted."
     },
     {
       "date": "2026-05-30",
@@ -252,26 +252,31 @@
     },
     {
       "date": "2026-05-30",
-      "change": "Added card payment notice to CTA banner on all location pages. Styled as dark green badge (#006400) matching WhatsApp button. Text: We now accept card payments \u2014 easier and more convenient for our customers. Applied to both SW and UK templates in generate_pages.py. Rebuilt 47,761 pages."
+      "change": "Added card payment notice to CTA banner on all location pages. Styled as dark green badge (#006400) matching WhatsApp button. Text: We now accept card payments — easier and more convenient for our customers. Applied to both SW and UK templates in generate_pages.py. Rebuilt 47,761 pages."
+    },
+    {
+      "date": "2026-05-31",
+      "change": "thank-you page fixed: {{ site.phone }} and {{ site.phone_tel }} tokens resolved to 07759 375790 / 07759375790. Layout rebuilt — centred container, trust pills horizontal, h1 gold, all text white high-contrast, call button gold/navy, useful links as white pill buttons. description meta also fixed."
     }
   ],
   "known_issues": {
-    "template_tags_in_base": "base.html may contain {% %} or {{ title }} tags the engine cannot process \u2014 use {{ content }} only",
-    "includes_not_rendered": "engine has no include system \u2014 all global components must be inlined into base.html",
-    "assets_not_in_build": "assets/ directory is not copied to build/ automatically \u2014 serve from project root or copy manually",
-    "port_clash": "always check port 8000 is free before serving \u2014 build only and refresh if server already running",
-    "assets_build_sync": "assets/ must be re-copied into build/ after every build \u2014 cp -r assets/ build/assets/ from each site root",
+    "template_tags_in_base": "base.html may contain {% %} or {{ title }} tags the engine cannot process — use {{ content }} only",
+    "includes_not_rendered": "engine has no include system — all global components must be inlined into base.html",
+    "assets_not_in_build": "assets/ directory is not copied to build/ automatically — serve from project root or copy manually",
+    "port_clash": "always check port 8000 is free before serving — build only and refresh if server already running",
+    "assets_build_sync": "assets/ must be re-copied into build/ after every build — cp -r assets/ build/assets/ from each site root",
     "body_content_full_html": "body_content must never contain full standalone HTML documents (no <!DOCTYPE>, <html>, <head>, <body> tags). Strip to <main> contents only. Full documents cause double header/footer when wrapped by base.html. Fix: re.search(r\"<main[^>]*>(.*?)</main>\", body, re.DOTALL)",
     "jekyll_site_source_of_truth": "Where a matching Jekyll source exists at /home/chubert/<PROJECT>/_site/, use compiled _site HTML as body_content source of truth. Extract <main> contents only. Never use AI-rewritten content when compiled source exists.",
-    "github_secret_name": "GitHub secret MUST be named SSH_PRIVATE_KEY \u2014 workflow references secrets.SSH_PRIVATE_KEY. Any other name causes Permission denied on rsync.",
-    "lfs_checkout": "pages.json tracked via Git LFS \u2014 workflow checkout must include lfs: true or build fails with empty JSON error.",
-    "build_script": "build.py must exist in repo root \u2014 GitHub Actions runner calls python3 build.py directly.",
-    "yaml_multiline": "Never embed multiline Python in deploy.yml \u2014 always use a separate build.py script to avoid YAML syntax errors.",
-    "homepage_slug": "Engine builds index slug as build/index/index.html \u2014 must be manually copied to build/index.html after every build: cp build/index/index.html build/index.html",
-    "base_html_jekyll_tags": "base.html may contain Jekyll tags (site.baseurl, site.title, prepend filters, block/endblock) the engine cannot process \u2014 audit base.html before first build and replace all with plain values or {{ content }}",
-    "missing_js_assets": "cookieconsent.umd.js and cookie-init.js may be referenced in base.html but not exist in assets/js/ \u2014 check and remove missing JS references from base.html",
-    "head_styles_in_jekyll": "Some Jekyll pages store CSS in <head> <style> blocks \u2014 extractor must pull <style> block from <head> AND prepend to body content. Affects pages using custom layouts without <main> tags.",
-    "missing_protected_pages": "bereavement-clearance, building-site-rubbish, commercial-waste-removal, hoarder-clearance, loft-clearance, man-with-van, probate-clearance, shed-clearance \u2014 deleted from build/ but not in pages.json. Return 404. Must be recovered from live server or rebuilt."
+    "github_secret_name": "GitHub secret MUST be named SSH_PRIVATE_KEY — workflow references secrets.SSH_PRIVATE_KEY. Any other name causes Permission denied on rsync.",
+    "lfs_checkout": "pages.json tracked via Git LFS — workflow checkout must include lfs: true or build fails with empty JSON error.",
+    "build_script": "build.py must exist in repo root — GitHub Actions runner calls python3 build.py directly.",
+    "yaml_multiline": "Never embed multiline Python in deploy.yml — always use a separate build.py script to avoid YAML syntax errors.",
+    "homepage_slug": "Engine builds index slug as build/index/index.html — must be manually copied to build/index.html after every build: cp build/index/index.html build/index.html",
+    "base_html_jekyll_tags": "base.html may contain Jekyll tags (site.baseurl, site.title, prepend filters, block/endblock) the engine cannot process — audit base.html before first build and replace all with plain values or {{ content }}",
+    "missing_js_assets": "cookieconsent.umd.js and cookie-init.js may be referenced in base.html but not exist in assets/js/ — check and remove missing JS references from base.html",
+    "head_styles_in_jekyll": "Some Jekyll pages store CSS in <head> <style> blocks — extractor must pull <style> block from <head> AND prepend to body content. Affects pages using custom layouts without <main> tags.",
+    "missing_protected_pages": "bereavement-clearance, building-site-rubbish, commercial-waste-removal, hoarder-clearance, loft-clearance, man-with-van, probate-clearance, shed-clearance — deleted from build/ but not in pages.json. Return 404. Must be recovered from live server or rebuilt.",
+    "unresolved_tokens_thank_you": "RESOLVED 2026-05-31 — {{ site.phone }} and {{ site.phone_tel }} replaced with hardcoded values in pages.json body_content and description."
   },
   "assets": {
     "images_migrated": true,
@@ -292,17 +297,17 @@
     "domain": "dandsclearances.co.uk",
     "plesk_path": "/var/www/vhosts/dandsclearances.co.uk/httpdocs/",
     "deploy_user": "root",
-    "github_actions_status": "build-only workflow \u2013 ready, runs on push",
+    "github_actions_status": "build-only workflow – ready, runs on push",
     "workflow_file": ".github/workflows/deploy.yml",
     "notes": "Deployment to Plesk not configured; artifact uploads build/",
     "git_initialized": true,
     "git_remote": "https://github.com/vswebsitedesign-ctrl/site_DS.git",
     "deploy_configured": false,
-    "deploy_status": "PENDING \u2014 no IP or deploy user set in workflow",
-    "recommended_method": "GitHub Actions + rsync over SSH as Plesk domain system user (not root) \u2014 see site_JKRS deploy.yml as reference implementation"
+    "deploy_status": "PENDING — no IP or deploy user set in workflow",
+    "recommended_method": "GitHub Actions + rsync over SSH as Plesk domain system user (not root) — see site_JKRS deploy.yml as reference implementation"
   },
   "content_status": {
-    "pages_built": "unknown \u2014 not yet audited",
+    "pages_built": "unknown — not yet audited",
     "base_html_status": "fixed (Jekyll tags removed, {{ content }} injected)",
     "assets_in_build": "unknown",
     "last_build": "2026-05-25",
@@ -453,9 +458,9 @@
         ],
         "slug_pattern": "/{service-slug}-{location-slug}/",
         "title_pattern": "{Service} in {Location} | D&S Clearances",
-        "h1_pattern": "{Service} in {Location} \u2014 Based Locally, D&S Clearances",
+        "h1_pattern": "{Service} in {Location} — Based Locally, D&S Clearances",
         "h2_pattern": "Family-run clearance business. Nowhere too far. {Location} covered.",
-        "meta_description": "Generic/shared across all location pages \u2014 not unique per page.",
+        "meta_description": "Generic/shared across all location pages — not unique per page.",
         "sections_in_order": [
           "Intro CTA",
           "Trust bullets (5 points, location-specific wording)",
@@ -510,15 +515,15 @@
       "Rubbish Removal",
       "Shed Clearance"
     ],
-    "services_per_location": "Up to 8 \u2014 varies by location. Example: Rossett has Rubbish Removal, Office Clearance, Shed Clearance, Hotel Clearance, House Clearance, Garage Clearance, Loft Clearance, Loft Insulation Removal",
+    "services_per_location": "Up to 8 — varies by location. Example: Rossett has Rubbish Removal, Office Clearance, Shed Clearance, Hotel Clearance, House Clearance, Garage Clearance, Loft Clearance, Loft Insulation Removal",
     "slug_pattern": "{service-slug}-{location-slug}",
     "title_pattern": "{Service} in {Location} | D&S Clearances",
-    "h1_pattern": "{Service} in {Location} \u2014 Based Locally, D&S Clearances",
+    "h1_pattern": "{Service} in {Location} — Based Locally, D&S Clearances",
     "h2_pattern": "Family-run clearance business. Nowhere too far. {Location} covered.",
-    "cross_links_strategy": "Dynamic \u2014 link to all sibling service pages for the same location, derived from pages.json. Do not hardcode service list.",
-    "youtube_embed": "Unique video_id per page \u2014 already present in pages.json data",
-    "known_issue_unresolved_tokens": "Non-location body_content (e.g. privacy-policy) contains {{ site.phone_tel }} and {{ site.phone }} tokens the engine cannot resolve \u2014 these will render literally. Needs separate fix.",
-    "generator_status": "build.py wraps body_content in base.html only \u2014 no template logic for location pages. All 47,347 location pages have empty body_content and will produce empty shells until a generator populates body_content in pages.json."
+    "cross_links_strategy": "Dynamic — link to all sibling service pages for the same location, derived from pages.json. Do not hardcode service list.",
+    "youtube_embed": "Unique video_id per page — already present in pages.json data",
+    "known_issue_unresolved_tokens": "Non-location body_content (e.g. privacy-policy) contains {{ site.phone_tel }} and {{ site.phone }} tokens the engine cannot resolve — these will render literally. Needs separate fix.",
+    "generator_status": "build.py wraps body_content in base.html only — no template logic for location pages. All 47,347 location pages have empty body_content and will produce empty shells until a generator populates body_content in pages.json."
   },
   "jekyll_era": {
     "note": "Facts extracted from Jekyll-era Master Report v4.5 (last updated 2026-05-16). Retained for historical reference and to inform current omni-builder architecture decisions.",
@@ -539,12 +544,12 @@
       "action": "/send.php",
       "recipient": "info@dandsclearances.co.uk",
       "spam_protection": "Honeypot field: surname_leave_email (display:none)",
-      "send_php_note": "send.php deploys to httpdocs root \u2014 NOT inside _site/"
+      "send_php_note": "send.php deploys to httpdocs root — NOT inside _site/"
     },
     "htaccess": {
       "location": "~/DS/.htaccess",
       "deploys_to": "httpdocs root separately from _site/",
-      "www_to_non_www": "Lines 1-3 \u2014 verified live",
+      "www_to_non_www": "Lines 1-3 — verified live",
       "redirects_301": "106 x plural slug to singular",
       "gone_410": "5,175 x dead legacy service slug rules",
       "gone_410_prefix_rules": 4,
@@ -559,23 +564,23 @@
         "sitemap-uk2.xml"
       ],
       "all_submitted_to_gsc": true,
-      "critical_issue": "sitemap.xml (jekyll-sitemap generated) contains localhost:4000 URLs \u2014 live on server and crawlable \u2014 must be deleted on next deploy",
+      "critical_issue": "sitemap.xml (jekyll-sitemap generated) contains localhost:4000 URLs — live on server and crawlable — must be deleted on next deploy",
       "generate_script": "~/DS/generate_sitemaps.py"
     },
     "gsc_data": {
       "export_path": "~/ds-gsc-export/",
       "total_rows_exported": 37088,
-      "date_range": "Jan 2024 \u2013 Mar 2026",
+      "date_range": "Jan 2024 – Mar 2026",
       "total_gsc_discovered": 62837,
       "total_live_pages_at_migration": 62875,
       "key_files": {
-        "gsc_quick_wins.csv": "501 rows \u2014 positions 4-10, 50+ impressions",
-        "gsc_cannibalisation.csv": "25,069 rows \u2014 multi-page same query",
-        "gsc_page2_opportunities.csv": "6,681 rows \u2014 positions 11-20",
-        "gsc_keyword_opportunities.csv": "1,971 rows \u2014 0 clicks, 50+ impressions",
+        "gsc_quick_wins.csv": "501 rows — positions 4-10, 50+ impressions",
+        "gsc_cannibalisation.csv": "25,069 rows — multi-page same query",
+        "gsc_page2_opportunities.csv": "6,681 rows — positions 11-20",
+        "gsc_keyword_opportunities.csv": "1,971 rows — 0 clicks, 50+ impressions",
         "gsc_internal_linking_targets.csv": "406 rows",
         "gsc_title_tag_opportunities.csv": "301 rows",
-        "gsc_low_ctr.csv": "294 rows \u2014 page 1, under 5% CTR"
+        "gsc_low_ctr.csv": "294 rows — page 1, under 5% CTR"
       }
     },
     "jekyll_page_counts_at_migration": {
@@ -644,17 +649,17 @@
     "governing_principle": "Only add complexity when you can point to a real, observed failure. Do not add: parallel generation, database layer, custom plugins, microservices.",
     "remaining_todo_at_migration": {
       "critical": [
-        "sitemap.xml on live server contains localhost:4000 URLs \u2014 delete on next deploy",
-        "sitemap.xml \u2014 remove jekyll-sitemap from _config.yml plugins list",
+        "sitemap.xml on live server contains localhost:4000 URLs — delete on next deploy",
+        "sitemap.xml — remove jekyll-sitemap from _config.yml plugins list",
         "active_services.yml cornwall: remove duplicate hot-tub-removal entry",
         "active_services.yml uk: remove duplicate loft-clearance, loft-insulation-removal, hotel-clearance, office-clearance",
         "GTM tags: phone clicks, WhatsApp clicks, form submissions not yet tracked"
       ],
       "seo": [
-        "Quick wins \u2014 501 rows pos 4-10 \u2014 unique intros + title tag review",
-        "Title tag opportunities \u2014 263 remaining pages",
-        "Page 2 opportunities \u2014 6,681 pages pos 11-20",
-        "rubbish-removal-camborne \u2014 1,119 impressions, homepage ranking pos 2.6"
+        "Quick wins — 501 rows pos 4-10 — unique intros + title tag review",
+        "Title tag opportunities — 263 remaining pages",
+        "Page 2 opportunities — 6,681 pages pos 11-20",
+        "rubbish-removal-camborne — 1,119 impressions, homepage ranking pos 2.6"
       ]
     }
   },
@@ -713,7 +718,7 @@
       "charset": "UTF-8",
       "viewport": "width=device-width, initial-scale=1.0",
       "stylesheet_link": "/assets/ds-styles.css",
-      "inline_styles": "Header and fixed button styles inlined in <head> \u2014 not in ds-styles.css",
+      "inline_styles": "Header and fixed button styles inlined in <head> — not in ds-styles.css",
       "canonical": "Self-referencing canonical in <head> e.g. https://dandsclearances.co.uk/rubbish-removal-rhoose/"
     },
     "header_structure": {
@@ -753,7 +758,7 @@
       "layout": "CSS grid auto-fill minmax 200px",
       "link_style": "White background, #0a4b78 text, #b8960c border, 700 weight",
       "slug_pattern": "/{service-slug}-{location-slug}/",
-      "note": "Rubbish Removal itself is excluded from cross-links on the rubbish-removal page \u2014 only sibling services shown"
+      "note": "Rubbish Removal itself is excluded from cross-links on the rubbish-removal page — only sibling services shown"
     },
     "youtube_embed": {
       "aspect_ratio": "16:9 via padding-bottom 56.25%",
@@ -837,9 +842,9 @@
       "480px"
     ],
     "notes": [
-      "hcr-* classes are present in ds-styles.css \u2014 these are legacy HCR classes carried over, not DS-specific. They are defined and will render but should not be used in new DS pages.",
-      "hero-img class is used in live HTML but NOT defined in ds-styles.css \u2014 handled by mobile media query override only (width:100%, height:auto, display:block)",
-      "ds-scroll-gallery and ds-track defined in CSS but not seen in location page HTML \u2014 may be used on homepage or other pages only"
+      "hcr-* classes are present in ds-styles.css — these are legacy HCR classes carried over, not DS-specific. They are defined and will render but should not be used in new DS pages.",
+      "hero-img class is used in live HTML but NOT defined in ds-styles.css — handled by mobile media query override only (width:100%, height:auto, display:block)",
+      "ds-scroll-gallery and ds-track defined in CSS but not seen in location page HTML — may be used on homepage or other pages only"
     ]
   },
   "base_html_audit": {
@@ -849,14 +854,14 @@
     "token_position": "Inside <main>{{ content }}</main>",
     "errors_found": [],
     "what_is_correct": [
-      "GTM script present and correct \u2014 GTM-T7X6PFJ8",
+      "GTM script present and correct — GTM-T7X6PFJ8",
       "GTM noscript present and correct",
-      "Header structure correct \u2014 sticky, navy, gold border",
-      "Nav links correct \u2014 Home, About Us, Services, Contact",
-      "Footer structure correct \u2014 3 columns, quick links, accreditation, hours",
-      "Footer copyright correct \u2014 2026 D&S Clearances",
-      "Cookie banner logic correct \u2014 localStorage guard, Accept/Decline buttons",
-      "fixed-quote-btn href correct \u2014 /contact/",
+      "Header structure correct — sticky, navy, gold border",
+      "Nav links correct — Home, About Us, Services, Contact",
+      "Footer structure correct — 3 columns, quick links, accreditation, hours",
+      "Footer copyright correct — 2026 D&S Clearances",
+      "Cookie banner logic correct — localStorage guard, Accept/Decline buttons",
+      "fixed-quote-btn href correct — /contact/",
       "body style background-color:#0e2a47 present"
     ],
     "conclusion": "base.html rebuilt 2026-05-30. All 9 critical fields hardcoded with confirmed values. {{ content }} is the only token. No empty fields remain."
@@ -917,12 +922,12 @@
       "terms-and-conditions",
       "thank-you"
     ],
-    "master_report_json_on_server": "NOTED \u2014 Master_Report.json is present in httpdocs root and publicly accessible. Review whether this should be removed.",
+    "master_report_json_on_server": "NOTED — Master_Report.json is present in httpdocs root and publicly accessible. Review whether this should be removed.",
     "notes": [
-      "51,675 total directories vs 47,360 pages in current pages.json \u2014 gap of ~4,315 directories. These are legacy Jekyll-era pages still live on server that are not in the current omni-builder pages.json.",
-      "loft-insulation-removal confirmed in Jekyll-era data but NOT visible in service prefixes \u2014 may exist on server under loft prefix or may have been removed.",
-      "locations/ directory present on server \u2014 likely legacy Jekyll location index pages.",
-      "_site directory present in httpdocs \u2014 this is the old Jekyll _site output deployed directly. Should be reviewed."
+      "51,675 total directories vs 47,360 pages in current pages.json — gap of ~4,315 directories. These are legacy Jekyll-era pages still live on server that are not in the current omni-builder pages.json.",
+      "loft-insulation-removal confirmed in Jekyll-era data but NOT visible in service prefixes — may exist on server under loft prefix or may have been removed.",
+      "locations/ directory present on server — likely legacy Jekyll location index pages.",
+      "_site directory present in httpdocs — this is the old Jekyll _site output deployed directly. Should be reviewed."
     ],
     "sitemaps_confirmed_live": [
       "sitemap-cornwall.xml",
@@ -931,31 +936,31 @@
       "sitemap-uk-im.xml",
       "sitemap-uk2.xml"
     ],
-    "sitemap_xml_status": "RESOLVED \u2014 sitemap.xml (Jekyll-generated, contained localhost:4000 URLs) is NOT present on the live server. All 5 correct sitemaps confirmed live.",
-    "sitemap_omni_builder_status": "No omni-builder sitemap exists yet \u2014 sitemaps still the Jekyll-generated versions. A new sitemap generator will be needed for the omni-builder architecture."
+    "sitemap_xml_status": "RESOLVED — sitemap.xml (Jekyll-generated, contained localhost:4000 URLs) is NOT present on the live server. All 5 correct sitemaps confirmed live.",
+    "sitemap_omni_builder_status": "No omni-builder sitemap exists yet — sitemaps still the Jekyll-generated versions. A new sitemap generator will be needed for the omni-builder architecture."
   },
   "fault_assessment": {
     "audit_date": "2026-05-30",
-    "audited_by": "Claude \u2014 fact-find from direct file inspection",
+    "audited_by": "Claude — fact-find from direct file inspection",
     "delete_and_rebuild": {
       "generate_pages.py": {
         "status": "DELETED",
         "faults": [
-          "Downloads a live page via curl as a template then does string replacement \u2014 same approach that caused previous disasters",
-          "Extracts locations from slugs using broken logic \u2014 misses multi-word locations, produces wrong results",
-          "County map has only 7 entries for 47,000+ pages \u2014 almost every page gets 'the UK'",
-          "Does blind string replace of 'aberdeen' and 'Aberdeen' across entire downloaded HTML \u2014 corrupts any page not containing those exact strings",
-          "Writes directly to build/ \u2014 bypasses build.py entirely, wrong architecture",
-          "Not connected to pages.json body_content at all \u2014 fundamentally wrong approach"
+          "Downloads a live page via curl as a template then does string replacement — same approach that caused previous disasters",
+          "Extracts locations from slugs using broken logic — misses multi-word locations, produces wrong results",
+          "County map has only 7 entries for 47,000+ pages — almost every page gets 'the UK'",
+          "Does blind string replace of 'aberdeen' and 'Aberdeen' across entire downloaded HTML — corrupts any page not containing those exact strings",
+          "Writes directly to build/ — bypasses build.py entirely, wrong architecture",
+          "Not connected to pages.json body_content at all — fundamentally wrong approach"
         ]
       },
       "examples_directory": {
         "status": "DELETED",
         "faults": [
-          "examples/st-budeaux/ contains flat .html files (garage-clearance-st-budeaux.html etc) \u2014 wrong structure, engine expects {slug}/index.html",
-          "examples/truro/ same problem \u2014 flat .html files, no subdirectory structure",
-          "Neither directory contains an index.html \u2014 both are broken as reference examples",
-          "st-budeaux only has 7 services \u2014 missing many services present in pages.json",
+          "examples/st-budeaux/ contains flat .html files (garage-clearance-st-budeaux.html etc) — wrong structure, engine expects {slug}/index.html",
+          "examples/truro/ same problem — flat .html files, no subdirectory structure",
+          "Neither directory contains an index.html — both are broken as reference examples",
+          "st-budeaux only has 7 services — missing many services present in pages.json",
           "truro has correct service count but wrong file structure"
         ]
       },
@@ -964,13 +969,13 @@
         "faults": [
           "title tag is empty",
           "meta description content is empty",
-          "stylesheet href is empty \u2014 not pointing to /assets/ds-styles.css",
+          "stylesheet href is empty — not pointing to /assets/ds-styles.css",
           "canonical href is empty",
-          "WhatsApp href is 'https://wa.me/' \u2014 missing 447759375790",
-          "Call href is 'tel:' \u2014 missing 07759375790",
-          "Header CTA text is 'WhatsApp ' and 'Call ' \u2014 missing Darren and phone number",
-          "Footer phone paragraph is empty \u2014 '\ud83d\udcde ' with no number",
-          "Fixed-call-btn href is 'tel:' and text is '\ud83d\udcde Call ' \u2014 missing phone number",
+          "WhatsApp href is 'https://wa.me/' — missing 447759375790",
+          "Call href is 'tel:' — missing 07759375790",
+          "Header CTA text is 'WhatsApp ' and 'Call ' — missing Darren and phone number",
+          "Footer phone paragraph is empty — '📞 ' with no number",
+          "Fixed-call-btn href is 'tel:' and text is '📞 Call ' — missing phone number",
           "Cookie banner Cookie Policy link href is empty string"
         ]
       },
@@ -978,9 +983,9 @@
         "status": "DELETE AND REBUILD",
         "faults": [
           "36,974 files built by broken generate_pages.py",
-          "Generated from downloaded live page with string replacement \u2014 not from pages.json body_content",
-          "Wrong architecture \u2014 should be produced by build.py from pages.json body_content",
-          "Content is unreliable \u2014 county data wrong, string replacements potentially corrupt"
+          "Generated from downloaded live page with string replacement — not from pages.json body_content",
+          "Wrong architecture — should be produced by build.py from pages.json body_content",
+          "Content is unreliable — county data wrong, string replacements potentially corrupt"
         ]
       }
     },
@@ -988,16 +993,16 @@
       "build_py": {
         "status": "KEEP",
         "notes": [
-          "Logic is sound \u2014 backup protected pages, wipe build, restore protected, build from pages.json, copy assets",
-          "Two duplicate entries in PROTECTED list (index.html and services/index.html) \u2014 minor, does not break anything"
+          "Logic is sound — backup protected pages, wipe build, restore protected, build from pages.json, copy assets",
+          "Two duplicate entries in PROTECTED list (index.html and services/index.html) — minor, does not break anything"
         ]
       },
       "pages_json": {
         "status": "KEEP",
         "notes": [
-          "Data is clean and correct \u2014 all fields confirmed",
+          "Data is clean and correct — all fields confirmed",
           "47,360 pages, all fields present: slug, title, body_content, service_name, location, video_id",
-          "body_content is empty for all 47,347 location pages \u2014 this is correct, generator will populate it"
+          "body_content is empty for all 47,347 location pages — this is correct, generator will populate it"
         ]
       },
       "assets": {
@@ -1008,10 +1013,10 @@
         ]
       },
       "config_yaml": {
-        "status": "KEEP \u2014 low priority",
+        "status": "KEEP — low priority",
         "notes": [
           "Jekyll-era file, not used by omni-builder engine",
-          "Contains primary_phone: 07931 476 744 \u2014 old incorrect number",
+          "Contains primary_phone: 07931 476 744 — old incorrect number",
           "Does not affect build"
         ]
       }
@@ -1030,9 +1035,9 @@
   },
   "service_area_breakdown": {
     "audit_date": "2026-05-30",
-    "audited_by": "Claude \u2014 confirmed from direct inspection of pages.json location data",
+    "audited_by": "Claude — confirmed from direct inspection of pages.json location data",
     "uk_wide": {
-      "description": "Services with pages across all UK locations \u2014 national coverage",
+      "description": "Services with pages across all UK locations — national coverage",
       "page_count_per_service": "~5,876 each except Loft Insulation Removal (5,905)",
       "services": [
         "Garage Clearance",
@@ -1056,7 +1061,7 @@
       ]
     },
     "south_west_only": {
-      "description": "Services with pages for Cornwall and Devon locations only \u2014 not UK-wide",
+      "description": "Services with pages for Cornwall and Devon locations only — not UK-wide",
       "page_count_per_service": 152,
       "services": [
         "Garden Rubbish Clearance",
@@ -1066,10 +1071,10 @@
         "garden-rubbish-clearance",
         "hot-tub-removal"
       ],
-      "confirmed_by": "Every location in both services is a Cornwall or Devon town \u2014 confirmed by inspection of all 304 pages"
+      "confirmed_by": "Every location in both services is a Cornwall or Devon town — confirmed by inspection of all 304 pages"
     },
     "bad_data_in_pages_json": {
-      "hot_tub_removal_bad_entry": "Hot Tub Removal has 'Cornwall and Devon' as a location value \u2014 not a real town. Must be removed when rebuilding.",
+      "hot_tub_removal_bad_entry": "Hot Tub Removal has 'Cornwall and Devon' as a location value — not a real town. Must be removed when rebuilding.",
       "unknown_service_pages": {
         "count": 6,
         "locations": [
@@ -1080,10 +1085,10 @@
           "Cornwall",
           "Newquay"
         ],
-        "issue": "Missing service_name field \u2014 these are legacy locations/ pages with incomplete data"
+        "issue": "Missing service_name field — these are legacy locations/ pages with incomplete data"
       }
     },
-    "generator_rule": "Generator must check service area before building \u2014 South West only services must never generate pages for UK locations. UK-wide services generate for all locations."
+    "generator_rule": "Generator must check service area before building — South West only services must never generate pages for UK locations. UK-wide services generate for all locations."
   },
   "sw_vs_uk_page_differences": {
     "audit_date": "2026-05-30",
@@ -1093,44 +1098,44 @@
       "uk": "Nowhere too far to clear your property. Family-run business serving Cornwall, Devon and the UK. Fully insured. Environment Agency licensed waste carrier. 15+ years experience."
     },
     "h1": {
-      "sw": "{Service} in {Location} \u2014 Based in {Location}, D&S Clearances",
-      "uk": "{Service} in {Location} \u2014 Based Locally, D&S Clearances"
+      "sw": "{Service} in {Location} — Based in {Location}, D&S Clearances",
+      "uk": "{Service} in {Location} — Based Locally, D&S Clearances"
     },
     "h2_hero": {
       "sw": "Family-run clearance business. Nowhere too far.",
       "uk": "Family-run clearance business. Nowhere too far. {Location} covered."
     },
     "cta_banner": {
-      "sw_h2": "\u26a1 {Service} in {Location}? Darren's on It.",
-      "sw_p": "D&S Clearances know Cornwall inside out. A family-run business serving {Location} and across Cornwall for over 15 years. Send photos on WhatsApp and get a fixed price back fast \u2014 no call centres, no middlemen, just a local team you can trust.",
-      "uk_h2": "\u26a1 {Service} in {Location}? Call Darren.",
+      "sw_h2": "⚡ {Service} in {Location}? Darren's on It.",
+      "sw_p": "D&S Clearances know Cornwall inside out. A family-run business serving {Location} and across Cornwall for over 15 years. Send photos on WhatsApp and get a fixed price back fast — no call centres, no middlemen, just a local team you can trust.",
+      "uk_h2": "⚡ {Service} in {Location}? Call Darren.",
       "uk_p": "Darren and the D&S team turn up, get the job done, and leave your property clear. Licensed, insured, and committed to keeping waste out of landfill. Send Darren a WhatsApp with photos and he'll price it up fast."
     },
     "trust_banner": {
-      "sw_h2": "\ud83c\udfc6 {Location}'s Trusted {Service} Team",
+      "sw_h2": "🏆 {Location}'s Trusted {Service} Team",
       "sw_items": [
-        "\u2705 15+ Years of Cornwall Clearances",
-        "\ud83d\udccb Environment Agency Licensed \u2014 Waste Transfer Notes on Every Job",
-        "\ud83d\udee1\ufe0f Fully Insured \u2014 Public Liability Cover in Place",
-        "\u267b\ufe0f Up to 90% Recycled or Donated \u2014 Not Landfill",
-        "\u26a1 Same-Day Availability Across Cornwall"
+        "✅ 15+ Years of Cornwall Clearances",
+        "📋 Environment Agency Licensed — Waste Transfer Notes on Every Job",
+        "🛡️ Fully Insured — Public Liability Cover in Place",
+        "♻️ Up to 90% Recycled or Donated — Not Landfill",
+        "⚡ Same-Day Availability Across Cornwall"
       ],
-      "uk_h2": "\ud83c\udfc6 Why {Location} Chooses D&S Clearances",
+      "uk_h2": "🏆 Why {Location} Chooses D&S Clearances",
       "uk_items": [
-        "\u2705 15+ Years Clearing Properties Across {Location}",
-        "\ud83d\udccb Environment Agency Licensed \u2014 Waste Transfer Notes Issued",
-        "\ud83d\udee1\ufe0f Fully Insured with Public Liability Cover",
-        "\u267b\ufe0f Up to 90% of Waste Recycled or Donated",
-        "\u26a1 Same-Day Jobs Taken On"
+        "✅ 15+ Years Clearing Properties Across {Location}",
+        "📋 Environment Agency Licensed — Waste Transfer Notes Issued",
+        "🛡️ Fully Insured with Public Liability Cover",
+        "♻️ Up to 90% of Waste Recycled or Donated",
+        "⚡ Same-Day Jobs Taken On"
       ]
     },
     "scroll_gallery": {
-      "sw": "PRESENT \u2014 ds-scroll-gallery with 20 DS-Clearances images (10 unique x2), alt text includes location name",
-      "uk": "NOT PRESENT \u2014 no scroll gallery on UK location pages"
+      "sw": "PRESENT — ds-scroll-gallery with 20 DS-Clearances images (10 unique x2), alt text includes location name",
+      "uk": "NOT PRESENT — no scroll gallery on UK location pages"
     },
     "faq_section_h2": {
-      "sw": "{Service} in {Location} \u2014 Your Questions",
-      "uk": "{Service} \u2014 {Location} Questions Answered"
+      "sw": "{Service} in {Location} — Your Questions",
+      "uk": "{Service} — {Location} Questions Answered"
     },
     "darren_commitment_h2": {
       "sw": "What Makes D&S Different in {Location}",
@@ -1145,8 +1150,8 @@
       "uk": "D&S and the Environment"
     },
     "environment_card_1_title": {
-      "sw": "\u267b\ufe0f Cornwall Charities Benefit First",
-      "uk": "\u267b\ufe0f Charity and Reuse First"
+      "sw": "♻️ Cornwall Charities Benefit First",
+      "uk": "♻️ Charity and Reuse First"
     },
     "cross_links_section": {
       "sw": {
@@ -1157,7 +1162,7 @@
         "note": "SW pages use service-card class with btn-sm. ALL services for that location listed including the current service."
       },
       "uk": {
-        "structure": "Inline style grid \u2014 no other-services-section or service-card class used",
+        "structure": "Inline style grid — no other-services-section or service-card class used",
         "heading": "Other Services in {Location}",
         "subheading": "D&S Clearances offer a range of services in {Location} and the surrounding area.",
         "includes_self": false,
