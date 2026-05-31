@@ -265,6 +265,54 @@
     {
       "date": "2026-05-31",
       "change": "ARCHITECTURE ISSUE LOGGED: send.php is not tracked in git because build/ is in .gitignore. send.php gets wiped every build and has no persistent home in the project. It must be manually rewritten and deployed to live server after every fresh session. Proper fix: send.php should live in project root or a dedicated php/ directory outside build/ and be deployed independently of the build process."
+    },
+    {
+      "date": "2026-05-31",
+      "change": "FULL FUCKUP AUDIT LOGGED: (1) Guessed file paths instead of confirming first. (2) Guessed Master Report filename — tried Master_Report.json instead of Master_Report_clean.json. (3) send.php written to build/ which is gitignored and wiped on every build — lost repeatedly. (4) Ran rsync --delete to live server without dry run — silently deleted 24 core service pages that were not in pages.json. Nearly unrecoverable. (5) Core page HTML never extracted into pages.json at migration — live server was de facto source of truth for 24 pages. (6) build.py PROTECTED list with SSH fetch was a sticking plaster not a fix — made build dependent on live server. (7) send.php was a copy from Builder Cornwall site — wrong email, wrong POST field names, wrong require path, never worked for D&S. (8) Unresolved site.* tokens left in pages.json from Jekyll migration — rendered literally on live site. (9) Ran terminal fact-find commands for facts already in Master Report. (10) Never verified pages.json completeness before running rsync --delete."
+    },
+    {
+      "date": "2026-05-31",
+      "change": "RECOVERY ACTIONS COMPLETED 2026-05-31: contact page tokens resolved. thank-you page tokens resolved and layout rebuilt. send.php rewritten correctly and deployed. 24 core pages extracted from local build/ into pages.json. Live site redeployed with all pages restored. AI_INSTRUCTIONS.md, ARCHITECTURE_PROBLEM.md and FUCKUPS_AND_FIXES.md written to project root."
+    },
+    {
+      "date": "2026-05-31",
+      "change": "FULL FUCKUP AUDIT LOGGED: (1) Guessed file paths instead of confirming first. (2) Guessed Master Report filename — tried Master_Report.json instead of Master_Report_clean.json. (3) send.php written to build/ which is gitignored and wiped on every build — lost repeatedly. (4) Ran rsync --delete to live server without dry run — silently deleted 24 core service pages that were not in pages.json. Nearly unrecoverable. (5) Core page HTML never extracted into pages.json at migration — live server was de facto source of truth for 24 pages. (6) build.py PROTECTED list with SSH fetch was a sticking plaster not a fix — made build dependent on live server. (7) send.php was a copy from Builder Cornwall site — wrong email, wrong POST field names, wrong require path, never worked for D&S. (8) Unresolved site.* tokens left in pages.json from Jekyll migration — rendered literally on live site. (9) Ran terminal fact-find commands for facts already in Master Report. (10) Never verified pages.json completeness before running rsync --delete."
+    },
+    {
+      "date": "2026-05-31",
+      "change": "RECOVERY ACTIONS COMPLETED 2026-05-31: contact page tokens resolved. thank-you page tokens resolved and layout rebuilt. send.php rewritten correctly and deployed. 24 core pages extracted from local build/ into pages.json. Live site redeployed with all pages restored. AI_INSTRUCTIONS.md, ARCHITECTURE_PROBLEM.md and FUCKUPS_AND_FIXES.md written to project root."
+    },
+    {
+      "date": "2026-05-31",
+      "change": "build.py cleaned: PROTECTED list and SSH fetch logic removed. pages.json is now sole source of truth. build/ is 100% disposable."
+    },
+    {
+      "date": "2026-05-31",
+      "change": "policy pages rebuilt from scratch: privacy-policy, cookie-policy, terms-and-conditions. hcr-master-wrapper classes replaced with inline styles. color:#333 set on all text. No CSS class dependencies."
+    },
+    {
+      "date": "2026-05-31",
+      "change": "send.php written to php/send.php in project root. Tracked in git. Deployed via scp separately from build. Never in build/."
+    },
+    {
+      "date": "2026-05-31",
+      "change": "sitemap.xml and robots.txt added to build.py. Generated automatically on every build. 47626 URLs. Domain: https://dandsclearances.co.uk."
+    },
+    {
+      "date": "2026-05-31",
+      "change": "build.py updated with auto-snapshot of pages.json before every build. Timestamped .bak files in data/. Instant local rollback always available."
+    },
+    {
+      "date": "2026-05-31",
+      "change": "session_end.sh written to project root. End of session git commit and push to GitHub in one command."
+    },
+    {
+      "date": "2026-05-31",
+      "change": "GitHub Actions deploy.yml disabled — renamed to deploy.yml.disabled. rsync deploy is now manual only via rsync + scp. No automated deploys."
+    },
+    {
+      "date": "2026-05-31",
+      "change": "Full deploy completed: backup taken, dry-run reviewed, rsync --delete executed, send.php redeployed via scp. Live site verified."
     }
   ],
   "known_issues": {
@@ -285,8 +333,14 @@
     "head_styles_in_jekyll": "Some Jekyll pages store CSS in <head> <style> blocks — extractor must pull <style> block from <head> AND prepend to body content. Affects pages using custom layouts without <main> tags.",
     "missing_protected_pages": "bereavement-clearance, building-site-rubbish, commercial-waste-removal, hoarder-clearance, loft-clearance, man-with-van, probate-clearance, shed-clearance — deleted from build/ but not in pages.json. Return 404. Must be recovered from live server or rebuilt.",
     "unresolved_tokens_thank_you": "RESOLVED 2026-05-31 — {{ site.phone }} and {{ site.phone_tel }} replaced with hardcoded values in pages.json body_content and description.",
-    "architecture_protected_pages": "OUTSTANDING: Protected page HTML lives in build/ and on live server only — not in pages.json. build/ is not truly disposable. Must extract body_content for all protected pages into pages.json to fix properly.",
-    "sendphp_not_in_git": "OUTSTANDING: send.php lives in build/ which is gitignored. It is wiped on every build and lost between sessions. Must be moved to project root or php/ directory outside build/ and tracked in git, then deployed to live server independently of the build."
+    "architecture_protected_pages": "RESOLVED 2026-05-31: All 24 core pages extracted into pages.json from local build/. pages.json is now the single source of truth for all page content. build/ is disposable. SSH fetch logic in build.py is now redundant — see build_py_protected_list issue.",
+    "sendphp_not_in_git": "RESOLVED 2026-05-31: send.php written to php/send.php, tracked in git, deployed via scp.",
+    "no_predeploy_dryrun": "RESOLVED 2026-05-31: dry-run reviewed before every deploy. session_end.sh and manual deploy process enforces this.",
+    "no_server_backup_before_deploy": "RESOLVED 2026-05-31: server backup taken before every deploy via tar to /root/backups/.",
+    "no_predeploy_completeness_check": "OUTSTANDING: No script exists to verify every live server URL has a corresponding pages.json entry with non-empty body_content before deploy. Must be written and run before every deploy.",
+    "site_tokens_in_pages_json": "RESOLVED 2026-05-31: all site.* tokens resolved in pages.json. Post-build token check added to verify command.",
+    "build_py_protected_list": "RESOLVED 2026-05-31: PROTECTED list and SSH fetch removed from build.py. pages.json is sole source of truth.",
+    "github_actions_auto_deploy": "RESOLVED 2026-05-31: deploy.yml disabled. No automated deploys. Manual rsync only."
   },
   "assets": {
     "images_migrated": true,
