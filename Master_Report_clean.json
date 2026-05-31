@@ -257,6 +257,14 @@
     {
       "date": "2026-05-31",
       "change": "thank-you page fixed: {{ site.phone }} and {{ site.phone_tel }} tokens resolved to 07759 375790 / 07759375790. Layout rebuilt — centred container, trust pills horizontal, h1 gold, all text white high-contrast, call button gold/navy, useful links as white pill buttons. description meta also fixed."
+    },
+    {
+      "date": "2026-05-31",
+      "change": "ARCHITECTURE ISSUE LOGGED: Protected pages (homepage, service pages) have their HTML living only in build/ and on the live server — NOT in pages.json. This means build/ is not truly disposable. Every fresh session or wiped build/ requires SSH fetch from live server to recover protected pages. Root cause: protected pages were hand-crafted and deployed directly to live server before omni-builder migration and their body_content was never extracted into pages.json. build.py patched with auto-fetch from live as interim fix. Proper fix is to extract body_content from all protected pages into pages.json so build/ is 100% generated output and fully disposable. This work is outstanding."
+    },
+    {
+      "date": "2026-05-31",
+      "change": "ARCHITECTURE ISSUE LOGGED: send.php is not tracked in git because build/ is in .gitignore. send.php gets wiped every build and has no persistent home in the project. It must be manually rewritten and deployed to live server after every fresh session. Proper fix: send.php should live in project root or a dedicated php/ directory outside build/ and be deployed independently of the build process."
     }
   ],
   "known_issues": {
@@ -276,7 +284,9 @@
     "missing_js_assets": "cookieconsent.umd.js and cookie-init.js may be referenced in base.html but not exist in assets/js/ — check and remove missing JS references from base.html",
     "head_styles_in_jekyll": "Some Jekyll pages store CSS in <head> <style> blocks — extractor must pull <style> block from <head> AND prepend to body content. Affects pages using custom layouts without <main> tags.",
     "missing_protected_pages": "bereavement-clearance, building-site-rubbish, commercial-waste-removal, hoarder-clearance, loft-clearance, man-with-van, probate-clearance, shed-clearance — deleted from build/ but not in pages.json. Return 404. Must be recovered from live server or rebuilt.",
-    "unresolved_tokens_thank_you": "RESOLVED 2026-05-31 — {{ site.phone }} and {{ site.phone_tel }} replaced with hardcoded values in pages.json body_content and description."
+    "unresolved_tokens_thank_you": "RESOLVED 2026-05-31 — {{ site.phone }} and {{ site.phone_tel }} replaced with hardcoded values in pages.json body_content and description.",
+    "architecture_protected_pages": "OUTSTANDING: Protected page HTML lives in build/ and on live server only — not in pages.json. build/ is not truly disposable. Must extract body_content for all protected pages into pages.json to fix properly.",
+    "sendphp_not_in_git": "OUTSTANDING: send.php lives in build/ which is gitignored. It is wiped on every build and lost between sessions. Must be moved to project root or php/ directory outside build/ and tracked in git, then deployed to live server independently of the build."
   },
   "assets": {
     "images_migrated": true,
