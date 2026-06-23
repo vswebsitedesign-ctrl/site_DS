@@ -1,0 +1,32 @@
+baseurl: ''
+description: Nowhere too far to clear your property. Family-run business serving Cornwall,
+  Devon and the UK. Fully insured. Environment Agency licensed waste carrier. 15+
+  years experience.
+email: info@dandsclearances.co.uk
+exclude:
+- .sass-cache/
+- .jekyll-cache/
+- Gemfile
+- Gemfile.lock
+- vendor/
+- assets/css/backup/
+- site.zip
+- generate_cornwall.py
+- generate_cornwall_devon.py
+- generate_uk_all.py
+- generate_sitemaps.py
+hero_image: /assets/images/Darren-with-DS-Clearance-Van.webp
+owner: Darren
+phone: 07759 375790
+phone_tel: 07759375790
+phone_whatsapp: '447759375790'
+primary_phone: 07931 476 744
+sass:
+  quiet_deps: true
+  silence_deprecations:
+  - import
+  - global-builtin
+  - color-functions
+site_name: DS
+title: D&S Clearances
+url: https://dandsclearances.co.uk

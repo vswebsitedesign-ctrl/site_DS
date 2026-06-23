@@ -1,0 +1,29 @@
+# Build output
+build/
+dist_staging/
+
+# Python
+__pycache__/
+*.pyc
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Secrets (if any)
+*.env
+# Backups and snapshots
+snapshots/
+*.bak
+*.bak.*
+*.backup*
+data/pages.json.bak*
+# Working files
+gsc_all_pages.json
+missing_slugs.json
+add_mv_hm_pages.py
+key.json
+*.json:Zone.Identifier
+*.py:Zone.Identifier
+data/pages.json
+key.json

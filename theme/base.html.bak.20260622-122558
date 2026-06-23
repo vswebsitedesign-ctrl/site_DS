@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src="https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);})(window,document,"script","dataLayer","GTM-T7X6PFJ8");</script>
+<!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  <link rel="stylesheet" href="/assets/ds-styles.css">
+  <style>
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: #0e2a47;
+      border-bottom: 3px solid #FFD700;
+      padding: 15px 20px;
+      font-family: Arial, sans-serif;
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .header-brand {
+      display: flex;
+      flex-direction: column;
+    }
+    .header-brand .brand-name {
+      color: #FFD700;
+      font-size: 1.6em;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .header-brand .brand-tagline {
+      color: #ffffff;
+      font-size: 0.85em;
+      margin-top: 3px;
+    }
+    .header-ctas {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .header-ctas a.btn-call {
+      background: #FFD700;
+      color: #0e2a47;
+      padding: 10px 22px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1em;
+      text-decoration: none;
+      transition: opacity 0.3s;
+    }
+    .header-ctas a.btn-whatsapp {
+      background: #006400;
+      color: #ffffff;
+      padding: 10px 22px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1em;
+      text-decoration: none;
+      transition: opacity 0.3s;
+    }
+    .header-ctas a:hover {
+      opacity: 0.85;
+      text-decoration: none;
+    }
+    .header-nav {
+      max-width: 1200px;
+      margin: 10px auto 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 0 0 5px;
+    }
+    .header-nav a {
+      color: #ffffff;
+      font-size: 0.9em;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .header-nav a:hover {
+      color: #FFD700;
+      text-decoration: none;
+    }
+    .fixed-call-btn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #FFD700;
+      color: #0e2a47;
+      font-weight: bold;
+      font-size: 1em;
+      padding: 14px 22px;
+      border-radius: 50px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      z-index: 9999;
+      text-decoration: none;
+      transition: opacity 0.3s;
+    }
+    .fixed-call-btn:hover {
+      opacity: 0.85;
+      text-decoration: none;
+    }
+    .fixed-quote-btn {
+      position: fixed;
+      bottom: 25px;
+      left: 25px;
+      background: #0a4b78;
+      color: #ffffff !important;
+      font-weight: bold;
+      font-size: 1em;
+      padding: 14px 22px;
+      border-radius: 50px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      z-index: 9999;
+      text-decoration: none;
+      transition: opacity 0.3s;
+    }
+    .fixed-quote-btn:hover {
+      opacity: 0.85;
+      text-decoration: none;
+    }
+  </style>
+<link rel="canonical" href="https://dandsclearances.co.uk/" />
+</head>
+<body style="background-color:#0e2a47;">
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T7X6PFJ8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-brand">
+      <a href="/" class="brand-name">D&amp;S Clearances</a>
+      <span class="brand-tagline">Nowhere too far to clear your property</span>
+    </div>
+    <div class="header-ctas">
+      <a href="https://wa.me/447759375790" class="btn-whatsapp">WhatsApp Darren</a>
+      <a href="tel:07759375790" class="btn-call">Call 07759 375790</a>
+    </div>
+  </div>
+  <nav class="header-nav">
+    <a href="/">Home</a>
+    <a href="/about-us/">About Us</a>
+    <a href="/services/">Services</a>
+    <a href="/contact/">Contact</a>
+  </nav>
+</header>
+
+<main>{{ content }}</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div style="flex:1 1 300px;">
+      <h3>D&amp;S Clearances</h3>
+      <p>Whatever your clearance; wherever your clearance; whenever your clearance: D&amp;S are there!</p>
+      <p style="font-weight:bold; color:#FFD700; font-size:18px;">📞 07759 375790</p>
+    </div>
+    <div style="flex:1 1 200px;">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about-us/">About Us</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/privacy-policy/">Privacy Policy</a></li>
+        <li><a href="/cookie-policy/">Cookie Policy</a></li>
+        <li><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+      </ul>
+    </div>
+    <div style="flex:1 1 250px;">
+      <h3>Accreditation</h3>
+      <div style="background:rgba(255,255,255,0.1); padding:15px; border-radius:8px; border-left:4px solid #FFD700;">
+        <p style="margin:0; font-size:14px;"><strong>Environment Agency</strong></p>
+        <p style="margin:5px 0 0; font-size:14px;">Fully Licensed Waste Carrier</p>
+      </div>
+      <div style="margin-top:15px; background:rgba(255,255,255,0.1); padding:15px; border-radius:8px; border-left:4px solid #FFD700;">
+        <p style="margin:0; font-size:14px;"><strong>Business Hours</strong></p>
+        <p style="margin:5px 0 0; font-size:14px;">Mon–Sat: 7am – 7pm</p>
+        <p style="margin:5px 0 0; font-size:14px; color:#e67e22;">Sunday: Closed</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 D&amp;S Clearances. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<a href="tel:07759375790" class="fixed-call-btn">📞 Call Darren</a>
+<a href="/contact/" class="fixed-quote-btn">✉️ Free Quote</a>
+
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#1C2350;color:#fff;padding:18px 5%;z-index:99999;box-shadow:0 -4px 12px rgba(0,0,0,0.3);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;">
+    <p style="margin:0;font-size:0.95rem;line-height:1.6;flex:1 1 300px;">We use cookies to improve your experience. By continuing to use this site you agree to our <a href="/cookie-policy/" style="color:#FFD700;font-weight:bold;">Cookie Policy</a>.</p>
+    <div style="display:flex;gap:10px;flex-shrink:0;">
+        <button onclick="cookieConsent('accepted')" style="background:#FFD700;color:#1C2350;border:none;padding:10px 22px;border-radius:6px;font-weight:bold;font-size:0.95rem;cursor:pointer;">Accept</button>
+        <button onclick="cookieConsent('declined')" style="background:transparent;color:#fff;border:2px solid rgba(255,255,255,0.4);padding:10px 22px;border-radius:6px;font-weight:bold;font-size:0.95rem;cursor:pointer;">Decline</button>
+    </div>
+</div>
+<script>
+(function(){
+    if(!localStorage.getItem('cookie_consent')){
+        document.getElementById('cookie-banner').style.display='flex';
+    }
+})();
+function cookieConsent(val){
+    localStorage.setItem('cookie_consent', val);
+    document.getElementById('cookie-banner').style.display='none';
+}
+</script>
+<div id="ds-sticky-badge" style="position:fixed;bottom:90px;right:18px;z-index:9998;background:#0e2a47;border:2px solid #FFD700;border-radius:14px;padding:14px 16px;max-width:230px;box-shadow:0 4px 18px rgba(0,0,0,0.35);font-family:sans-serif;">
+  <p style="margin:0 0 10px 0;color:#fff;font-size:0.85rem;line-height:1.5;">🚛 No waiting around. Darren and the D&amp;S team give you a fixed price and turn up when they say they will.</p>
+  <a href="tel:07759375790" style="display:block;background:#FFD700;color:#0e2a47;text-align:center;padding:10px 14px;border-radius:999px;font-weight:800;font-size:0.9rem;text-decoration:none;">📞 Call Darren: 07759 375790</a>
+</div>
+</body>
+</html>
