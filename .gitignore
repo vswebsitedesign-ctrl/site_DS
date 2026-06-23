@@ -27,3 +27,4 @@ key.json
 *.py:Zone.Identifier
 data/pages.json
 key.json
+theme/*.bak*
